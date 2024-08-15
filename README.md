@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Smooth Scroller & Parallax
+
+A modern Next.js 14 showcase featuring smooth momentum scrolling with Lenis and scroll-triggered parallax image effects powered by GSAP.
+
+---
+
+## Overview
+
+This project demonstrates how to combine Lenis smooth momentum scrolling with GSAP ScrollTrigger to build fluid, high-performance web experiences. It features a synchronized parallax image gallery where different columns scroll at distinct speeds without causing layout shifts or frame drops.
+
+---
+
+## Key Features
+
+- **Lenis Smooth Scroll**: Hardware-accelerated inertial momentum scrolling.
+- **GSAP ScrollTrigger**: Scroll-linked velocity and transform calculations applied smoothly to visual layers.
+- **Parallax Image Columns**: Multi-column image showcase scrolling at varied rates for an immersive 3D depth effect.
+- **Performance Optimized**: Frame-synced render loop ensuring fluid 60fps animations across modern browsers.
+- **Responsive Layout**: Adapts gracefully across desktop, tablet, and mobile screens.
+
+---
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Smooth Scrolling**: Lenis (`lenis`)
+- **Animation Engine**: GSAP (`gsap`)
+- **Styling**: Tailwind CSS
+- **Language**: JavaScript (React 18)
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/iamjunaidjutt/nextjs-smooth-scroller.git
+cd nextjs-smooth-scroller
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+# or
+pnpm install
+```
+
+### 3. Run the development server
 
 ```bash
 npm run dev
 # or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser to experience the smooth scroll and parallax animations.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Available Scripts
 
-## Learn More
+- `npm run dev` — Starts the local Next.js development server.
+- `npm run build` — Compiles and optimizes production assets.
+- `npm run start` — Runs the compiled production build locally.
+- `npm run lint` — Runs ESLint checks.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+nextjs-smooth-scroller/
+├── src/
+│   ├── app/
+│   │   ├── layout.js              # Root HTML and font layout
+│   │   ├── page.js                # Main page rendering the gallery
+│   │   └── globals.css            # Base stylesheet
+│   └── components/
+│       ├── SmoothScroller.jsx     # Lenis smooth scroll initialization
+│       ├── Parallax.jsx           # Parallax container and animation logic
+│       └── ImageList.jsx          # Gallery columns and image presentation
+├── public/                        # Static assets
+└── package.json                   # Dependencies and scripts
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is open-source and available under the [MIT License](LICENSE).
